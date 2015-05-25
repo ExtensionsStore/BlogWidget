@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Aydus_BlogWidget widget config
+ *
+ * @category   Aydus
+ * @package    Aydus_BlogWidget
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<widgets>
+    <blogwidget_widget type="aydus_blogwidget/widget" 
+                       translate="name description" 
+                       module="aydus_blogwidget">
+        <name>Blog Widget</name>
+        <description>Show list of blog articles.</description>
+        <parameters>
+            <blog_url translate="label description">
+                <label>RSS Feed Url</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <description>The URL to the RSS Feed.</description>
+            </blog_url>
+            <max_items translate="label description">
+                <label>Max Number of Items</label>
+                <visible>1</visible>
+                <required>0</required>
+                <default>5</default>
+                <type>text</type>
+                <description>Maximum number of items to show. If this is not set, 25 is default.</description>                
+            </max_items>
+            <order_by translate="label description">
+                <label>Order By</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+                <value>pubDate</value>
+                <values>
+                    <default translate="label">
+                        <value>pubDate</value>
+                        <label>Date Descending</label>
+                    </default>           
+                    <item translate="label">
+                        <value>title</value>
+                        <label>Title Alphabetical</label>
+                    </item>                    
+                </values>   
+                <description>Order of the blog items.</description>                                             
+            </order_by>	            	
+            <block_title translate="label description">
+                <label>Block Title</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Title of this widget instance.</description>                
+            </block_title>	            			
+            <container_class translate="label description">
+                <label>Container Class</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Class of the widget container.</description>
+            </container_class>	
+            <target translate="label description">
+                <label>Link Target</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Link target. Default is _blank.</description>                
+            </target>								
+        </parameters>
+    </blogwidget_widget>
+</widgets>

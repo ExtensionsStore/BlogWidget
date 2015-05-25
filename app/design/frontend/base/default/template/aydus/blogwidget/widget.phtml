@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Aydus_BlogWidget config
+ *
+ * @category   Aydus
+ * @package    Aydus_BlogWidget
+ * @author     Aydus <davidt@aydus.com>
+ */
+
+$items = $this->getItems();
+if (is_array($items) && count($items)>0):
+    $maxItems = (int)$this->getMaxItems();
+    $maxItems = ($maxItems) ? $maxItems : 25;
+?>
+
+<div class="<?php echo $this->getContainerClass() ?>">
+
+    <div class="block-title">
+        <strong><span><?php echo $this->__($this->getBlockTitle()) ?></span></strong>
+    </div>
+
+    <ul>
+    <?php for ($i=0; $i<$maxItems; $i++):  ?>
+        <?php $item = $items[$i]; ?>
+        <li>
+        <a href="<?php echo $item->getLink()?>" target="<?php echo ($this->getTarget()) ? $this->getTarget() : '_blank' ?>"><?php echo $item->getTitle() ?></a>
+        </li>
+    
+    <?php endfor; ?>
+    </ul>
+    
+</div>
+<?php 
+endif; 
+?>

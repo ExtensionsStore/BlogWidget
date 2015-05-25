@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Aydus_BlogWidget module
+ *
+ * @category   Aydus
+ * @package    Aydus_BlogWidget
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_BlogWidget>
+             <active>true</active>
+             <codePool>community</codePool>
+        </Aydus_BlogWidget>
+    </modules>
+</config>
