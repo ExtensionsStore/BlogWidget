@@ -1,0 +1,33 @@
+tables:
+  core/layout_update:
+    - layout_update_id: 1
+      handle: default
+      xml: | 
+        <reference name="bottom.container"><block type="aydus_blogwidget/widget" name="84521362368a7a46a0b53cfcc6b8abea"><action method="setData"><name>blog_url</name><value>http://fivethirtyeight.com/sports/feed/</value></action><action method="setData"><name>max_items</name><value>5</value></action><action method="setData"><name>order_by</name><value>pubDate</value></action><action method="setData"><name>block_title</name><value>538 Sports</value></action><action method="setData"><name>container_class</name><value>links</value></action></block></reference>    
+  core/layout_link:
+    - layout_link_id: 1
+      store: 0
+      area: frontend
+      package: base
+      theme: default
+      layout_update_id: 1
+  widget/widget_instance:
+    - instance_id: 1
+      instance_type: aydus_blogwidget/widget
+      package_theme: base/default
+      title: Footer Blog
+      store_ids: 0
+      widget_parameters: a:6:{s:8:"blog_url";s:39:"http://fivethirtyeight.com/sports/feed/";s:9:"max_items";s:1:"5";s:8:"order_by";s:7:"pubDate";s:11:"block_title";s:10:"538 Sports";s:15:"container_class";s:5:"links";s:6:"target";s:0:"";}
+  widget/widget_instance_page:
+    - page_id: 1
+      instance_id: 1
+      page_group: all_pages
+      layout_handle: default
+      block_reference: bottom.container
+      page_for: all
+  widget/widget_instance_page_layout:
+    - page_id: 1
+      layout_update_id: 1
+      
+      
+      

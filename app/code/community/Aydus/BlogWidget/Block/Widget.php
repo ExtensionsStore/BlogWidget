@@ -13,7 +13,7 @@ class Aydus_BlogWidget_Block_Widget extends Mage_Core_Block_Template implements 
     
     protected $_template = 'aydus/blogwidget/widget.phtml';
     protected $_items;
-    
+        
     public function getItems()
     {
         if (!is_array($this->_items)){
