@@ -24,6 +24,9 @@ if (is_array($items) && count($items)>0):
     <?php for ($i=0; $i<$maxItems; $i++):  ?>
         <?php $item = $items[$i]; ?>
         <li>
+        <?php if ($item->getThumbnail()):?>
+        <img src="<?php echo $item->getThumbnail() ?>" />
+        <?php endif; ?>        
         <a href="<?php echo $item->getLink()?>" target="<?php echo ($this->getTarget()) ? $this->getTarget() : '_blank' ?>"><?php echo $item->getTitle() ?></a>
         </li>
     
