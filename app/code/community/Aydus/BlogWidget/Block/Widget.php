@@ -26,7 +26,7 @@ class Aydus_BlogWidget_Block_Widget extends Mage_Core_Block_Template implements 
                 
                 if (!$this->getBlockTitle()){
                 
-                    $title = $feed->channel->title;
+                    $title = (string)$feed->channel->title;
                     $this->setBlockTitle($title);
                 }   
                 
