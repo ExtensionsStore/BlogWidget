@@ -20,7 +20,35 @@ class Aydus_BlogWidget_Block_Widget extends Mage_Core_Block_Template implements 
             
             $blogUrl = $this->getBlogUrl();
             
-            $feed = simplexml_load_file($blogUrl);
+            $cache = Mage::app()->getCache();
+            $data = $cache->load($blogUrl);
+            $data = unserialize($data);
+            
+            if (!$data){
+                
+                $timeout = 1;
+                $ch = curl_init();
+                
+                curl_setopt($ch, CURLOPT_URL, $blogUrl);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+                
+                $data = curl_exec($ch);
+                
+                if ($data){
+                    
+                    $expires = $this->getCacheExpires();
+                    $expires = ($expires) ? $expires : 3600;
+                    $cache->save($data, $blogUrl, array('BLOCK_HTML'), $expires);
+                }
+                
+            } 
+            
+            $feed = false;
+            
+            if ($data){
+                $feed = simplexml_load_string($data);
+            }
             
             if ($feed && $feed->channel){
                 

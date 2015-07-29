@@ -22,6 +22,14 @@
                 <type>text</type>
                 <description>The URL to the RSS Feed.</description>
             </blog_url>
+            <cache_expires translate="label description">
+                <label>Cached Feed Expiration</label>
+                <visible>1</visible>
+                <required>1</required>
+                <default>3600</default>
+                <type>text</type>
+                <description>Expiration of cache in seconds.</description>
+            </cache_expires>            
             <max_items translate="label description">
                 <label>Max Number of Items</label>
                 <visible>1</visible>
