@@ -22,7 +22,6 @@ class Aydus_BlogWidget_Block_Widget extends Mage_Core_Block_Template implements 
             
             $cache = Mage::app()->getCache();
             $data = $cache->load($blogUrl);
-            $data = unserialize($data);
             
             if (!$data){
                 
