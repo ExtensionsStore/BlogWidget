@@ -19,10 +19,12 @@ add a new widget instance. Configure the widget options:
 
 Example layout example e.g. local.xml:
 
+```xml
 <!-- Add blog feed extension. -->
 <block type="aydus_blogwidget/widget" name="blogFeed">
 	<action method="setContainerClass"><value>blogs-container</value></action>
-	<action method="setData"><name>blog_url</name><value>http://melaniescorner.com/feed/</value></action>
+	<action method="setData"><name>blog_url</name><value>http://fivethirtyeight.com/sports/feed/</value></action>
 	<action method="setData"><name>max_items</name><value>3</value></action>
 	<action method="setData"><name>order_by</name><value>pubDate</value></action>
 </block>
+```
