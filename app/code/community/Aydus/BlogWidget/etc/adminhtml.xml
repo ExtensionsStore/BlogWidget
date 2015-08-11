@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * BlogWidget acl
+ * 
+ * @category   Aydus
+ * @package    Aydus_BlogWidget
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <aydus_blogwidget translate="title">
+                                        <title>Blog Widget Extension</title>
+                                    </aydus_blogwidget>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

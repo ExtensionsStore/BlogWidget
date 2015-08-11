@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- 
+/** 
+ * Attribute Products system config
+ *
+ * @category   Aydus
+ * @package    Aydus_BlogWidget
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <sections>
+        <cms>
+            <groups>
+                <aydus_blogwidget translate="label" module="aydus_blogwidget">
+                    <label>Blog Widget</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>700</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <version translate="label">
+                            <label>Version</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </version>   
+                    </fields>
+                </aydus_blogwidget>
+            </groups>
+        </cms>
+    </sections>
+</config>
+

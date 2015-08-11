@@ -24,16 +24,16 @@ if (is_array($items) && count($items)>0):
     <?php for ($i=0; $i<$maxItems; $i++):  ?>
         <?php $item = $items[$i]; ?>
         <li>
-        <?php if ($item->getThumbnail()):?>
-        <img src="<?php echo $item->getThumbnail() ?>" />
-        <?php endif; ?>        
-        <a href="<?php echo $item->getLink()?>" target="<?php echo ($this->getTarget()) ? $this->getTarget() : '_blank' ?>"><?php echo $item->getTitle() ?></a>
+            <?php if ($item->getThumbnail()):?>
+                <img src="<?php echo $item->getThumbnail() ?>" />
+            <?php else: ?>
+                <img src="<?php echo $this->getSkinUrl('images/blog-thumbnail-default.png') ?>" />
+            <?php endif; ?>
+            <a class="title" href="<?php echo $item->getLink()?>" target="<?php echo ($this->getTarget()) ? $this->getTarget() : '_blank' ?>"><?php echo $item->getTitle() ?></a>
+            <div class="date"><?php echo date('m/d/Y', strtotime($item->getData('pubDate')))?></div>
         </li>
-    
     <?php endfor; ?>
     </ul>
     
 </div>
-<?php 
-endif; 
-?>
+<?php endif; ?>

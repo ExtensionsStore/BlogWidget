@@ -37,5 +37,8 @@
                 <class>Aydus_BlogWidget_Helper</class>
             </blogwidget>        
         </helpers>          
-    </global>         
+    </global>    
+    <default>
+    	<cms><aydus_blogwidget><version>0.9.1</version></aydus_blogwidget></cms>
+    </default>             
 </config>
